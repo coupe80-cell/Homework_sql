@@ -18,7 +18,7 @@ INSERT INTO albums (name, year) VALUES
 ('Альбом 3', 2025),
 ('Альбом 4', 2020);
 
-INSERT INTO tracks (album_id, name, length) VALUES
+INSERT INTO tracks (album_id, name, lenght) VALUES
 (1, 'Песня 1', '180'),
 (1, 'Песня 2', '240'),
 (2, 'Песня 3', '210'),
