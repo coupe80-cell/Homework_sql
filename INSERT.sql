@@ -1,7 +1,3 @@
-ALTER TABLE albums ADD CONSTRAINT valid_year CHECK(year >= 1900);
-ALTER TABLE collections ADD CONSTRAINT valid_year CHECK(year >= 1900);
-ALTER TABLE tracks ALTER COLUMN length TYPE INTEGER USING EXTRACT(EPOCH FROM length)::integer; --Доработка с учётом рекомендаций преподователя
-
 --Задание 1
 
 INSERT INTO artists (name) VALUES
