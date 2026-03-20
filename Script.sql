@@ -45,3 +45,7 @@ CREATE TABLE collection_track (
     track_id INTEGER REFERENCES tracks(id),
     PRIMARY KEY(collection_id, track_id)
 );
+
+ALTER TABLE albums ADD CONSTRAINT valid_year CHECK(year >= 1900);
+ALTER TABLE collections ADD CONSTRAINT valid_year CHECK(year >= 1900);
+ALTER TABLE tracks ALTER COLUMN length TYPE INTEGER USING EXTRACT(EPOCH FROM length)::integer; --Доработка с учётом рекомендаций преподователя
