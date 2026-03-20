@@ -1,13 +1,13 @@
 --Задание 2
 
-SELECT name AS трек, length AS продолжительность
+SELECT name AS трек, lenght AS продолжительность
 FROM tracks
-ORDER BY length DESC
+ORDER BY lenght DESC
 LIMIT 1;
 
 SELECT name AS трек
 FROM tracks
-WHERE length >= 210;
+WHERE lenght >= 210;
 
 
 SELECT name AS сборник
@@ -17,7 +17,7 @@ WHERE year BETWEEN 2018 AND 2020;
 
 SELECT name AS трек
 FROM tracks
-WHERE length >= 210;
+WHERE lenght >= 210;
 
 
 SELECT name AS сборник
@@ -52,7 +52,7 @@ JOIN albums al ON t.album_id = al.id
 WHERE al.year IN (2019, 2020);
 
 
-SELECT al.name AS альбом, AVG(t.length) AS средняя_продолжительность
+SELECT al.name AS альбом, AVG(t.lenght) AS средняя_продолжительность
 FROM tracks t
 JOIN albums al ON t.album_id = al.id
 GROUP BY al.name;
