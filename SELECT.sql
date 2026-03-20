@@ -25,14 +25,17 @@ FROM collections
 WHERE year BETWEEN 2018 AND 2020;
 
 
-SELECT name AS исполнитель
-FROM artists
-where name not like '% %';
-
-
 SELECT name AS трек
 FROM tracks
-WHERE LOWER(name) LIKE '%мой%' OR LOWER(name) LIKE '%my%';
+WHERE LOWER(name) ILIKE '% мой %'
+  OR LOWER(name) ILIKE 'мой %' 
+  OR LOWER(name) ILIKE '% мой'
+  OR LOWER(name) = 'мой'
+  OR LOWER(name) ILIKE '% my %'  
+  OR LOWER(name) ILIKE 'my %'
+  OR LOWER(name) ILIKE '% my'
+  OR LOWER(name) = 'my';
+
 
 --Задание3
 
